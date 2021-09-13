@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>TinyOne</title>
+
+    <!--META-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/icon-font.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--JS-->
+
+</head>
+<body>
+
+<!--<div class="se-pre-con">-->
+<!--<div class="cssload-container">-->
+<!--	<div class="cssload-loading"><i></i><i></i><i></i><i></i></div>-->
+<!--</div>-->
+<!--</div>-->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="menuside">
+                    <div id="o-wrapper" class="o-wrapper">
+
+                        <button id="c-button--slide-left"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></button>
+
+                    </div><!-- /o-wrapper -->
+                </div>
+                <div class="logo"><a href="/index_admin"><img src="images/logo.jpg" alt=""/></a></div>
+                <!--                    <nav id="topmenu">-->
+                <!--                    	<ul>                                                                                          -->
+                <!--                        	<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>-->
+                <!--                        	<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>-->
+                <!--                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>-->
+                <!--                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>-->
+                <!--                        </ul>-->
+                <!--                    </nav>-->
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<section id="states">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Stats & Testimonial</h2>
+                <p class="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus<br> tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-2 col-sm-3 col-md-3">
+                <article>
+                    <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                    <h3 class="counter"><td th:text="${today_c}"></td></h3>
+                    <p>今日已打卡人数</p>
+                </article>
+            </div>
+
+            <div class="col-lg-2 col-sm-3 col-md-3">
+                <article>
+                    <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                    <h3 class="counter"><td th:text="${not_c}"></td></h3>
+                    <p>今日未打卡人数</p>
+                </article>
+            </div>
+
+            <div class="col-lg-2 col-sm-3 col-md-3">
+                <article>
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <h3 class="counter"><td th:text="${abn_c}"></td></h3>
+                    <p>异常人数</p>
+                </article>
+            </div>
+
+            <div class="col-lg-2 col-sm-3 col-md-3">
+                <article>
+                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    <h3 class="counter"><td th:text="${res_c}"></td></h3>
+                    <p>物资需求</p>
+                </article>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.5s">
+
+
+        <div class="row">
+            <h2>物资需求</h2>
+            <div class="comTbody" style="height:300px;overflow:auto;border:1px solid #ddd">
+                <table th:border="1">
+                    <tr>
+                        <td>学号</td>
+                        <td> 姓名 </td>
+                        <td>口罩</td>
+                        <td>体温计</td>
+                        <td>消毒液</td>
+                        <td>其他需求</td>
+                    </tr>
+                    <tr th:each="res: ${resList}">
+                        <td th:text="${res.id}"></td>
+                        <td th:text="${res.name}"></td>
+                        <td th:text="${res.mask}"></td>
+                        <td th:text="${res.meter}"></td>
+                        <td th:text="${res.alcohol}"></td>
+                        <td th:text="${res.other}"</td>
+                        <td><a th:href="@{/mark/}+${res?.id}">完成</a></td>
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <h2>打卡情况</h2>
+            <div class="col-lg-4 col-sm-4 col-md-4">
+                <h3>已打卡名单</h3>
+                <div class="comTbody" style="height:300px;overflow:auto;border:1px solid #ddd">
+            <table th:border="1">
+                <article>
+
+                    <tr>
+                        <td>学号</td>
+                        <td>姓名</td>
+                    </tr>
+                <tr th:each="user: ${userList}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.name}"></td>
+                </tr>
+                </article>
+            </table>
+                    </div>
+            </div>
+            <div class="col-lg-4 col-sm-4 col-md-4">
+                <h3>未打卡名单</h3>
+                <div class="comTbody" style="height:300px;overflow:auto;border:1px solid #ddd">
+            <table border="1">
+
+
+                    <tr>
+                        <td>学号</td>
+                        <td>姓名</td>
+                    </tr>
+
+                <tr th:each="student: ${nodkList}">
+                    <td th:text="${student.id}"></td>
+                    <td th:text="${student.name}"></td>
+                </tr>
+
+
+            </table>
+            </div>
+
+            </div>
+            <div class="col-lg-4 col-sm-4 col-md-4">
+                <h3>异常名单</h3>
+                <div class="comTbody" style="height:300px;overflow:auto;border:1px solid #ddd">
+            <table th:border="1">
+
+                <tr>
+                    <td>学号</td>
+                    <td>姓名</td>
+                    <td>体温</td>
+                </tr>
+                <tr th:each="abnuser: ${abnList}">
+                    <h2></h2>
+                    <td th:text="${abnuser.id}"></td>
+                    <td th:text="${abnuser.name}"></td>
+                    <td th:text="${abnuser.tw}"></td>
+                </tr>
+            </table>
+                    </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="row">
+            <h2>特殊情况上报</h2>
+        </div>
+        <div class="row">
+            <table th:border="1">
+            <tr th:each="user:${infoList}">
+                <div class="col-lg-3 col-sm-3 col-md-3">
+                <p th:text="${user.id}"></p>
+                </div>
+                <div class="col-lg-3 col-sm-3 col-md-3">
+                <p th:text="${user.name}"></p>
+                </div>
+                <div class="col-lg-6 col-sm-6 col-md-6">
+                <p th:text="${user.info}"></p>
+                </div>
+            </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+
+
+
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-4 col-md-4">
+                <address>Copyright &copy; 2020.Jinxiong You All rights reserved.</address>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+<nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+    <button class="c-menu__close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+    <ul class="c-menu__items">
+        <li class="c-menu__item"><a href="/index_admin" class="c-menu__link">首页</a></li>
+        <li class="c-menu__item"><a href="/jkdk" class="c-menu__link">健康打卡</a></li>
+        <li class="c-menu__item"><a href="/info" class="c-menu__link">信息汇总</a></li>
+        <li class="c-menu__item"><a href="/wzsl" class="c-menu__link">物资申领</a></li>
+        <li class="c-menu__item"><a href="/notification" class="c-menu__link">通知发文</a></li>
+        <li class="c-menu__item"><a href="/login" class="c-menu__link">退出登录</a></li>
+    </ul>
+</nav><!-- /c-menu slide-left -->
+
+
+
+
+<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+

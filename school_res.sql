@@ -1,0 +1,1 @@
+INSERT INTO school.res (id, name, mask, alcohol, meter, other) VALUES (1827405055, '游锦雄', 1, 1, 1, '无');

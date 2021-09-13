@@ -1,0 +1,4 @@
+INSERT INTO school.jkdk (no, id, fr, city, sex, tw, date, info, name) VALUES (4, 1827405055, 'y', '苏州市', 'm', 37.5, '2021-06-23 08:45:40', '无', '游锦雄');
+INSERT INTO school.jkdk (no, id, fr, city, sex, tw, date, info, name) VALUES (5, 1827405054, 'n', '苏州市', 'm', 36.8, '2021-06-23 08:47:34', '正常', '徐朋飞');
+INSERT INTO school.jkdk (no, id, fr, city, sex, tw, date, info, name) VALUES (6, 1827405056, 'n', '苏州市', 'm', 36.8, '2021-06-23 08:47:58', '无', '王伟');
+INSERT INTO school.jkdk (no, id, fr, city, sex, tw, date, info, name) VALUES (7, 1827405055, 'y', '苏州市', 'm', 37.5, '2021-06-23 12:27:08', '有发热症状', '游锦雄');

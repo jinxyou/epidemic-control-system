@@ -1,0 +1,22 @@
+td{
+    border: 1px solid grey;
+    color: #ffffff;
+    border-collapse: collapse;
+}
+th{
+    background: #777777;
+    color: #af251b;
+    size: A3;
+}
+body{
+    background: #af251b;
+}
+.xpf{
+    margin: auto;
+}
+.button1{
+
+    font-size: 20px ;
+    background: #337ab7;
+    color: #af251b;
+}

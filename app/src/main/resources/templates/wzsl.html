@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>TinyOne</title>
+
+    <!--META-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/icon-font.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!--JS-->
+
+</head>
+<body>
+
+<!--<div class="se-pre-con">-->
+<!--<div class="cssload-container">-->
+<!--	<div class="cssload-loading"><i></i><i></i><i></i><i></i></div>-->
+<!--</div>-->
+<!--</div>-->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="menuside">
+                    <div id="o-wrapper" class="o-wrapper">
+
+                        <button id="c-button--slide-left"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></button>
+
+                    </div><!-- /o-wrapper -->
+                </div>
+                <div class="logo"><a href="/index"><img src="images/logo.jpg" alt=""/></a></div>
+                <!--                    <nav id="topmenu">-->
+                <!--                    	<ul>                                                                                          -->
+                <!--                        	<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>-->
+                <!--                        	<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>-->
+                <!--                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>-->
+                <!--                            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>-->
+                <!--                        </ul>-->
+                <!--                    </nav>-->
+
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+
+<section id="contact">
+    <div class="container os-animation" data-os-animation="fadeIn" data-os-animation-delay="0.5s">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Keep in touch with us</h2>
+                <p class="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus<br> tristique bibendum. Donec rutrum sed sem quis venenatis.</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-3 col-lg-offset-2 col-sm-4 col-md-4">
+                <article>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <h3>地址</h3>
+                    <span>姑苏区干将东路333号 <br> 苏州市, 江苏省</span>
+                </article>
+            </div>
+
+            <div class="col-lg-3 col-sm-4 col-md-4">
+                <article>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <h3>E-mail</h3>
+                    <span>contact@suda.edu.cn</span>
+                </article>
+            </div>
+
+            <div class="col-lg-3 col-sm-4 col-md-4">
+                <article>
+                    <i class="fa fa-phone-square" aria-hidden="true"></i>
+                    <h3>电话</h3>
+                    <span>+844 1234 56789</span>
+                </article>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <h2>物资申领</h2>
+            <form action="/submit_res">
+            <div class="col-lg-12 col-sm-12 col-md-12">
+
+                    <input type="text" name="id" placeholder="学号"/>
+                    <input type="text" name="name" placeholder="姓名"/>
+                    <input type="text" name="meter" placeholder="所需体温计数量，不需要请填0"/>
+
+
+            </div>
+
+            <div class="col-lg-12 col-sm-12 col-md-12">
+                    <input type="text" name="mask" placeholder="所需口罩数量，不需要请填0"/>
+                    <input type="text" name="alcohol" placeholder="所需酒精消毒液数量，不需要请填0"/>
+                    <input type="text" name="other" placeholder="其他需求"/>
+
+
+
+
+
+
+            </div>
+            <div>
+
+            </div>
+            <div class="col-lg-12">
+
+
+
+                    <input type="submit", value="提交">
+
+
+            </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+
+
+
+
+        <div class="row">
+            <div class="col-lg-4 col-sm-4 col-md-4">
+                <address>Copyright &copy; 2020.Jinxiong You All rights reserved.</address>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+<nav id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+    <button class="c-menu__close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+    <ul class="c-menu__items">
+        <li class="c-menu__item"><a href="/index" class="c-menu__link">首页</a></li>
+        <li class="c-menu__item"><a href="/jkdk" class="c-menu__link">健康打卡</a></li>
+        <li class="c-menu__item"><a href="/info" class="c-menu__link">信息汇总</a></li>
+        <li class="c-menu__item"><a href="/wzsl" class="c-menu__link">物资申领</a></li>
+        <li class="c-menu__item"><a href="/notification" class="c-menu__link">通知发文</a></li>
+        <li class="c-menu__item"><a href="/login" class="c-menu__link">退出登录</a></li>
+    </ul>
+</nav><!-- /c-menu slide-left -->
+
+
+
+<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
